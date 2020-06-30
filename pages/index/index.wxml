@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view>
+	<swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular>
+		<block wx:for="{{background}}" wx:key="*this">
+			<swiper-item>
+				<image class="swiper_img" src="{{item}}"></image>
+			</swiper-item>
+		</block>
+	</swiper>
+</view>
+<view style="margin:10px 0 10px 20px ">
+	<text style="font-size:30px;font-weight:bold;">豆瓣电影</text>
+</view>
+<view style="margin:10px 0 10px 20px ">
+	<text style="color:#ccc">源码出品 必属精品！！</text>
+</view>
+<view wx:for="{{jumplist}}" wx:key="item" style="width:100%;margin-bottom:20px">
+	<navigator url="/pages/upcom/upcom?url={{item.url}}&name={{item.name}}">
+		<view style="height:60px;line-height:60px;border-radius:5px;display:flex;justify-content: space-between;margin:0 10rpx;background:#eeeeee">
+			<text style="margin-left:10px">{{item.name}}</text><text style="margin-right:10px">{{item.tag}}</text>
+		</view>
+	</navigator>
+</view>

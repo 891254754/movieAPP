@@ -1,0 +1,27 @@
+<!--pages/upcom/upcom.wxml-->
+<view style="display:flex; flex-direction: column;padding:20px">
+	<text>{{name}}的电影</text>
+
+	<view wx:for="{{movielist}}" wx:key="id" style="display:flex;justify-content: space-between;margin-top:20px">
+		<navigator style="width:100%;display:flex;justify-content: space-between;margin-top:20px" url="/pages/movie/movie?id={{item.id}}">
+			<image style="width:80px;height:120px" src="{{item.image}}"></image>
+			<view style="flex:1;margin-left:30px;padding:20px 0">
+				<view>
+					<text style="font-size:20px;font-weight:bold">{{item.name}}</text>
+				</view>
+				<view>
+					<text style="color:#ccc;font-size:14px">{{item.actors}}</text>
+				</view>
+				<view>
+					<text style="color:#ccc">导演：{{item.director}}</text>
+				</view>
+			</view>
+			<view>
+				<text style="line-height:120px;color:red">{{item.point}}</text>
+			</view>
+		</navigator>
+	</view>
+
+
+
+</view>

@@ -1,0 +1,5 @@
+<!--pages/scroll/scroll.wxml-->
+<view wx:for="{{goodslist}}" wx:key="id" style="margin:20px;padding:0 10px;display:flex">
+<image class="img" src="http://127.0.0.1:5000/upload/imgs/goods_img/{{item.imgUrl}}"></image>
+<text style="margin-left:20px">{{item.name}}</text>
+</view>
